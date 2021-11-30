@@ -4,6 +4,8 @@
   box-sizing: border-box;
 }
 
+/* METTERE IL FONT */
+
 /* settings layout */
 
 body .container {
@@ -17,6 +19,7 @@ body .container .box {
   margin:0px auto;
   position: relative;
   top:30px;
+  display: flex;
 }
 
 body .container .box::after {
@@ -28,10 +31,7 @@ body .container .box::after {
 
 body .container .box .column {
   height: 100%;
-  background-color: blue; /* //DA TOGLIERE */
-  border:2px solid red;   /* //DA TOGLIERE */
-  display: inline-block;
-  margin-right:-4px;
+  border:1px solid gray;
 }
 
 
@@ -48,39 +48,134 @@ body .container .box .column {
 
 .box .column .utente,
 .box .column .simbols {
-  width: 30%;
+  width: 40%;
   height: 10%;
-  border:2px solid black; /* //DA TOGLIERE */
-  background-color: teal; /* //DA TOGLIERE */
+  background-color: #eaeaea; 
   display: inline-block;
-};
-
-.f-left {
-  float:left;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.f-right {
-  float:right;
-}
 
-.box .column .notifiche,
-.box .column .chat-message {
+
+.box .column.right .chat-message {
   width: 100%;
   height: 10%;
-  border:2px solid black;/* //DA TOGLIERE */
-  background-color: teal;/* //DA TOGLIERE */
-
 }
 
+.box .column .notifiche {
+  height: 10%;
+  background-color: teal;
+}
 
 .box .column .chat {
   height: 80%;
-  border:2px solid black;/* //DA TOGLIERE */
-  background-color: teal;/* //DA TOGLIERE */
+  background-color: white;
   }
 
 
-  .position {
-    position:absolute;
-    bottom:0;
-  }
+.position {
+  position:absolute;
+  bottom:0;
+}
+
+
+/* content of box */
+
+body .container .box .left .utente  img {
+  width: 30%;
+  height: 60%;
+  object-fit: cover;
+  border-radius: 100%;
+}
+
+body .container .box .right .utente  img {
+  width: 20%;
+  height: 80%;
+  object-fit: cover;
+  border-radius: 100%;
+}
+
+
+
+
+.font {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.column .simbols  {
+  color:grey;
+  font-size: 30px;
+}
+
+
+
+.f-left {
+  float: left;
+}
+
+.f-right {
+  float: right;
+}
+
+/* content of column left */
+.column.left .chat .input {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.column.left .chat .input input {
+  width: 95%;
+  height: 60%;
+  margin:0 auto;
+  padding-left:35px;
+}
+
+.column.left .chat .input i {
+position: absolute;
+left:20px;
+}
+
+.column.left .list-avatar ul li {
+  list-style: none;
+  line-height: 50px;
+}
+
+
+ .list-avatar ul li img {
+  height: 120px;
+  border-radius: 100%;
+}
+
+
+.list-avatar  {
+  height: 80%;
+  overflow-y: scroll;
+}
+
+.column.right {
+  background-image: url(img/mine.jpg);
+}
+
+/* content of column right */
+.column.right .text .subtitle {
+  color:gray;
+}
+
+
+.column.right .chat-message  input {
+  width:90%;
+  height: 90%;
+  padding-left:10px;
+}
+
+.chat-message {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
