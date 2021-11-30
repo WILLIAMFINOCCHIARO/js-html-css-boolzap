@@ -48,22 +48,11 @@
           <!-- lista avatar -->
           <div class="list-avatar">
             <ul>
-              <li>
-                <img src="img/avatar_2.jpg" alt="">
-                Michele
+              <li v-for="(elm,index) in contatti">
+                <img v-bind:src=elm.immagine alt=  elm.nome>
+                {{elm.nome}}
               </li>
-              <li>
-                <img src="img/avatar_3.jpg" alt="">
-                Fabio
-              </li>
-              <li>
-                <img src="img/avatar_3.jpg" alt="">
-                Samuele
-              </li>
-              <li>
-                <img src="img/avatar_4.jpg" alt="">
-                Luisa
-              </li>
+              
             </ul>
           </div>
         </div>

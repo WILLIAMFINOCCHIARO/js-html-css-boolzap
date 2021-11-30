@@ -28,7 +28,6 @@
 
 const root = new Vue ({
   el:"#root",
-  el: "#app",
     data : {
         contatti: [
             // Michele
