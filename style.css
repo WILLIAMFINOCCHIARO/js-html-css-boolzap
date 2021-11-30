@@ -3,3 +3,84 @@
   padding:0;
   box-sizing: border-box;
 }
+
+/* settings layout */
+
+body .container {
+  background-image: -moz-linear-gradient(#009688 100px,#dadbd3 4%);
+  height: 100vh;
+}
+
+body .container .box {
+  width: 80%;
+  height:90vh;
+  margin:0px auto;
+  position: relative;
+  top:30px;
+}
+
+body .container .box::after {
+  display: table;
+  content: "";
+  clear: both;
+}
+
+
+body .container .box .column {
+  height: 100%;
+  background-color: blue; /* //DA TOGLIERE */
+  border:2px solid red;   /* //DA TOGLIERE */
+  display: inline-block;
+  margin-right:-4px;
+}
+
+
+.column.left {
+  width:30%;
+}
+
+.column.right {
+  width: 70%;
+  position: relative;
+}
+
+/* settings interno box  */
+
+.box .column .utente,
+.box .column .simbols {
+  width: 30%;
+  height: 10%;
+  border:2px solid black; /* //DA TOGLIERE */
+  background-color: teal; /* //DA TOGLIERE */
+  display: inline-block;
+};
+
+.f-left {
+  float:left;
+}
+
+.f-right {
+  float:right;
+}
+
+.box .column .notifiche,
+.box .column .chat-message {
+  width: 100%;
+  height: 10%;
+  border:2px solid black;/* //DA TOGLIERE */
+  background-color: teal;/* //DA TOGLIERE */
+
+}
+
+
+.box .column .chat {
+  height: 80%;
+  border:2px solid black;/* //DA TOGLIERE */
+  background-color: teal;/* //DA TOGLIERE */
+  }
+
+
+  .position {
+    position:absolute;
+    bottom:0;
+  }
