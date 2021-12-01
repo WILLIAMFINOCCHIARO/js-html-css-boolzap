@@ -204,3 +204,21 @@ left:20px;
 .container-right .messaggio.io {
   background-color: blueviolet;
 }
+
+.container-right .messaggio {
+  padding-left: 30px;
+  display: grid;
+  justify-items: stretch;
+}
+
+.container-right .messagio span {
+  
+}
+
+
+.container-right .messaggio .date {
+  color:grey;
+  padding-right: 40px;
+  align-self: flex-end;
+  justify-self:end;
+}
