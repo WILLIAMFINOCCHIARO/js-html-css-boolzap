@@ -211,13 +211,10 @@ left:20px;
   justify-items: stretch;
 }
 
-.container-right .messagio span {
-  
-}
 
 
 .container-right .messaggio .date {
-  color:grey;
+  color:rgb(211, 0, 0);
   padding-right: 40px;
   align-self: flex-end;
   justify-self:end;

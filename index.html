@@ -5,13 +5,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Exercise</title>
-   <!-- LINK connessione FONT AWESOME -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-   <!-- LINK connessione FONT  --> 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;1,900&display=swap" rel="stylesheet"> 
-   <!-- LINK connessione CSS -->
+<!-- LINK connessione FONT  --> 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;1,900&display=swap" rel="stylesheet">
+<!-- LINK connessione FONT AWESOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+<!-- LINK connessione CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -93,19 +93,11 @@
 
         <div class="container-right">
 
-          <div class="messaggio interlocutore">
-            <span>ciao</span>
-            <div class="date">aaaaaaa</div>
-
-          </div>
-          <div class="messaggio interlocutore ">
-            <span>ciaoa</span>
+          <div class="messaggio interlocutore " v-for= "message in contatti[activeIndex].messages">
+            <span>{{message.text}}</span>
             <div class="date"> 
-              <div class="testo">
-                aaaaaa
-              </div>
+              {{message.data}}
             </div>
-
           </div>
 
           <div class="messaggio io">
@@ -134,9 +126,9 @@
 
     
   
- <!-- LINK VUE development version, includes helpful console warnings -->
+<!-- LINK VUE development version, includes helpful console warnings -->
   <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
- <!-- LINK connessione JAVASCRIPT --> 
+<!-- LINK connessione JAVASCRIPT --> 
   <script src="js/script.js"></script>
 
   <!-- <script src="script.js"></script> -->

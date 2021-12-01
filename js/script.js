@@ -136,10 +136,14 @@ const root = new Vue ({
                     }
                 ]
             }
-        ]
+        ],
+        activeIndex: 0,
+        inputText: '',
     },
+    
 
     methods:{
+        
 
 
 
