@@ -27,10 +27,10 @@
 
 
 const root = new Vue ({
-  el:"#root",
+    el:"#root",
     data : {
         contatti: [
-            // Michele
+        //  NOTE - // Michele
             {   
                 activeInfo : false,
                 nome:"Michele",
@@ -56,7 +56,7 @@ const root = new Vue ({
                 ]
             },
 
-            // Fabio 
+           // NOTE - // Fabio 
             {
                 activeInfo : false,
                 nome:"Fabio",
@@ -85,7 +85,7 @@ const root = new Vue ({
                 ]
             },
 
-            // Samuele 
+          // NOTE - // Samuele 
             {
                 activeInfo : false,
                 nome:"Samuele",
@@ -115,7 +115,7 @@ const root = new Vue ({
                 ]
             },
 
-            // Luisa
+            // NOTE - Luisa 
             {
                 activeInfo : false,
                 nome:"Luisa",
@@ -139,14 +139,13 @@ const root = new Vue ({
         ]
     },
 
-
-  methods:{
-
+    methods:{
 
 
 
 
-  }
+
+    }
 
 
 
