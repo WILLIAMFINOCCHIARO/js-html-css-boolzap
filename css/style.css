@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* NOTE settings layout */
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+.container {
+  height: 100vh;
+  background-image: -moz-linear-gradient(#009688 100px,#dadbd3 4%);
+}
+
+.container .box {
+  width: 80%;
+  max-width: 1000px;
+  height: 90vh;
+  margin: 0 auto;
+  position: relative;
+  top:20px;
+  display: flex;
+}
+
+.box::after{
+  display: table;
+  content: "";
+  clear:both;
+}
+
+.container .box .column {
+height: 100%;
+}
+
+.column.left {
+  width:30%;
+}
+
+.column.right{
+  width: 70%;
+  position: relative;
+}
+
+.box .column  .bar {
+  height: 10%;
+  width: 100%;
+}
+
+.box .column .notifiche {
+  height: 15%;
+}
+
+
+.box .column .search {
+  height: 10%;
+}
+
+.box .column .list-avatar {
+  height: 65%;
+}
+
+.box .column .cont-chat {
+  width: 80%;
+  margin: 0 auto;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.box .column .cont-chat .message.sent {
+  align-self: flex-end;
+}
+
+.box .column .message-chat {
+  height: 15%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+
+.box .column.right .cont-chat .message {
+  width: 40%;
+  height: 15%;
+}
+
+
+
+
+/* NOTE debug */
+.debug .box {
+  background-color: blue;
+}
+
+
+.debug .container .box .column {
+  background-color: brown;
+  }
+
+.debug  .box .bar {
+    background-color: crimson;
+    border: 1px solid black;
+  }
+
+  
+.debug .box .column .notifiche {
+  background-color: coral;
+}
+
+
+.debug .box .column .search {
+  background-color:darkgreen;
+}
+
+
+.debug .box .column .list-avatar {
+  background-color: gold;
+  border: 2px solid red;
+}
+
+
+.debug .box .column .cont-chat {
+  background-color:saddlebrown;
+}
+
+
+
+.debug .box .column .message-chat {
+  background-color: yellow;
+  border: 2px solid red;
+}
+
+
+.debug .box .column.right .cont-chat .message.sent {
+  background-color: salmon;
+}
+
+
+.debug .box .column.right .cont-chat .message.received {
+  background-color: purple;
+}

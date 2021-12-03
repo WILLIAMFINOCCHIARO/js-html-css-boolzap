@@ -4,133 +4,79 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Exercise</title>
-<!-- LINK connessione FONT  --> 
+  <title>Boolzapp</title>
+</head>
+<!-- NOTE connessione font lato -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;1,900&display=swap" rel="stylesheet">
-<!-- LINK connessione FONT AWESOME -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
-<!-- LINK connessione CSS -->
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-<div class="container" id="root">
-    <!-- NOTE box centrale --> 
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;1,900&display=swap" rel="stylesheet"> 
+<!-- NOTE connessione font awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!-- NOTE connessione css -->
+<link rel="stylesheet" href="css/style.css">
+<body class="debug">
+
+
+  <div class="container">
 
     <div class="box">
 
+      <!-- NOTE column left -->
+      <div class="column left ">
 
-      <!-- NOTE colonna di sinistra --> 
+        <div class="bar"></div>
+        <div class="notifiche"></div>
+        <div class="search"></div>
+        <div class="list-avatar">
 
-      <div class="column left clearfix">
-      <!-- NOTE utente colonna sinistra -->
-
-      <div class="nome utente f-left">
-          <!-- NOTE logo sinistra -->
-
-          <img src="img/avatar_1.jpg" alt="avatar">
-          <span >Nome Utente</span>
-        </div>
-
-          <!-- NOTE simboli colonna sinistra --> 
-          
-        <div class="simbols f-right">
-        <!-- NOTE simboli destra -->
-          <i class="fas fa-circle-notch"></i>
-          <i class="fas fa-comment-alt"></i>
-          <i class="fas fa-ellipsis-v"></i>
         </div>
 
 
-        <!-- NOTE chat colonna sinistra --> 
-
-        <div class="chat"> 
-          <!-- NOTE input iniziale -->
-
-          <div class="input">
-            <i class="fas fa-search"></i>
-            <input type="text" placeholder="Cerca o inizia una nuova chat">
-          </div>
-
-          <!-- NOTE lista avatar --> 
-
-          <div class="list-avatar">
-            <ul>
-              <li v-for="(elm,index) in contatti" @click="changeContact(index)" :class="index == activeIndex ? 'active' : null">
-                <img :src="elm.immagine" alt=  elm.nome>
-                {{elm.nome}}
-              </li>
-              
-            </ul>
-          </div>
-        </div>
-      
       </div>
 
-      <!-- NOTE colonna di destra --> 
+      <!-- NOTE column right -->
+      <div class="column right ">
+        <div class="bar"></div>
 
-      <div class="column right">
-        <!-- NOTE utente colonna destra --> 
-
-        <div class="utente f-left" >
-          <img :src="contatti[activeIndex].immagine" alt="avatar">
-          <div class="text">
-          <span class="accesso">{{contatti[activeIndex].nome}}</span>
-          <div class="subtitle">Ultimo accesso oggi alle</div>
-          </div>
-        </div>
-
-        <!-- NOTE simboli colonna destra --> 
-      
-        <div class="simbols f-right">
-          <i class="fas fa-search"></i>
-          <i class="fas fa-paperclip"></i>
-          <i class="fas fa-ellipsis-v"></i>
-        </div>
-
-        <!-- NOTE messaggi della chat --> 
-
-        <div class="container-right">
-
-          <div class="messaggio interlocutore " v-for= "message in contatti[activeIndex].messages">
-            <span>{{message.text}}</span>
-            <div class="date"> 
-              {{message.data}}
-            </div>
-          </div>
-
-          <div class="messaggio io">
-            <span>ciao</span>
-            <div class="date">aaaaaa</div>
+        <div class="cont-chat">
+          <div class="message sent ">
 
           </div>
+          <div class="message received ">
+
+          </div>
+
+
         </div>
 
-        <!-- NOTE chat sotto colonna destra --> 
+        <div class="message-chat">
 
-        <div class="chat-message position">
-          <i class="far fa-smile"></i>
-          <input type="text" placeholder="Scrivi un messaggio">
-          <i class="fas fa-microphone"></i>
         </div>
+
 
       </div>
+
+
     </div>
+
+
+
+
+
+
+
+
+
+
   </div>
 
 
 
-
-
-
-    
   
-<!-- LINK VUE development version, includes helpful console warnings -->
-  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-<!-- LINK connessione JAVASCRIPT --> 
-  <script src="js/script.js"></script>
 
-  <!-- <script src="script.js"></script> -->
+
+
+  <!-- NOTE connessione javascript -->
+  <script src="js/script.js"></script>
 </body>
 </html>
