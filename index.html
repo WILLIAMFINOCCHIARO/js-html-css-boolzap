@@ -49,7 +49,7 @@
         </div>
         <div class="list-avatar">
           <ul >
-            <li v-for = "cont in contatti">
+            <li v-for = "(cont,index) in contatti" @click="ClickConversation(index)">
               <img :src="`./img/avatar${cont.avatar}.jpg`" alt="cont.avatar">
               <span>{{cont.name}}</span>
             </li>
@@ -80,13 +80,8 @@
         <div class="cont-chat">
           <div :class="mess.status " class="message" v-for ="mess in contatti[ActiveIndex].messages">
             <span>{{mess.message}}</span>
-            <div class="date">
-              {{mess.date}}
-            </div>
-
+            <div class="date">{{mess.date}}</div>
           </div>
-
-
         </div>
 
         <div class="message-chat">
@@ -94,8 +89,6 @@
           <input type="text" placeholder="scrivi un messaggio">
           <i class="fas fa-microphone"></i>
         </div>
-
-
       </div>
 
 

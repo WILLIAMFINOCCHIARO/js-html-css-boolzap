@@ -114,6 +114,7 @@ height: 100%;
 .box .column.right .cont-chat .message {
   width: 40%;
   height: 15%;
+  margin:10px;
 }
 
 

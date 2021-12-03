@@ -115,6 +115,14 @@ const root = new Vue ({
   ],
   ActiveIndex :0
 
+  },
+
+  methods: {
+    ClickConversation :  function(i) {
+        this.ActiveIndex = i;
+      }
+    
+
   }
 
 });
