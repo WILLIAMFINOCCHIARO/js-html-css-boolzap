@@ -86,14 +86,14 @@ height: 100%;
 }
 
 
-.box .column .cont-chat .message.sent {
+.box .column .cont-chat .sent {
   align-self: flex-end;
   background-color: blueviolet;
 }
 
 
 
-.box .column .cont-chat .message.received {
+.box .column .cont-chat .received {
   background-color: lightcoral;
 }
 
@@ -261,7 +261,8 @@ height: 100%;
 }
 
 .box .column.right .cont-chat .message .date  {
-  color:red;
+  color:blue;
+  font-weight: 600;
   padding-right: 20px;
   margin-top: 20px;
   justify-self: end;

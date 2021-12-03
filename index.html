@@ -78,17 +78,10 @@
         </div>
 
         <div class="cont-chat">
-          <div class="message sent ">
-            <span>ciao</span>
+          <div :class="mess.status " class="message" v-for ="mess in contatti[ActiveIndex].messages">
+            <span>{{mess.message}}</span>
             <div class="date">
-              ciao
-            </div>
-
-          </div>
-          <div class="message received ">
-            <span>ciao</span>
-            <div class="date">
-              ciao
+              {{mess.date}}
             </div>
 
           </div>

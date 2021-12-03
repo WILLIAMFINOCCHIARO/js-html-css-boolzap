@@ -113,7 +113,7 @@ const root = new Vue ({
           ],
       },
   ],
-  
+  ActiveIndex :0
 
   }
 
