@@ -8,6 +8,7 @@
 
 body {
   font-family: 'Lato', sans-serif;
+  font-weight: 600;
 }
 
 .container {
@@ -37,20 +38,26 @@ height: 100%;
 
 .column.left {
   width:30%;
+  background-color: lightgray;
+  border:1px solid black;
 }
 
 .column.right{
   width: 70%;
   position: relative;
+  border:1px solid black;
+  background-color: white;
 }
 
 .box .column  .bar {
   height: 10%;
   width: 100%;
+  background-color: goldenrod;
 }
 
 .box .column .notifiche {
   height: 15%;
+  background-color: lightgreen;
 }
 
 
@@ -64,8 +71,9 @@ height: 100%;
 
 .box .column .cont-chat {
   width: 80%;
-  margin: 0 auto;
   height: 80%;
+  background-image: url("../img/mine.jpg");
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
 }
@@ -73,13 +81,26 @@ height: 100%;
 
 .box .column .cont-chat .message.sent {
   align-self: flex-end;
+  background-color: blueviolet;
+}
+
+
+
+.box .column .cont-chat .message.received {
+  background-color: lightcoral;
 }
 
 .box .column .message-chat {
   height: 15%;
-  width: 100%;
+  width: 80%;
+  border:1px solid black;
   position: absolute;
   bottom: 0;
+  left:50%;
+  transform: translate(-50%,0);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 
@@ -90,8 +111,159 @@ height: 100%;
 
 
 
+.box .column.right .message-chat input   {
+  width: 80%;
+  height: 80%;
+  padding-left: 20px;
+}
+
+
+
+.box .column.right .message-chat i   {
+  font-size: 20px;
+  padding:0 20px;
+}
+
+/* NOTE content of box  */
+
+
+.container .box .column .bar  {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  }
+
+  
+.container .box .column .bar .logo  {
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
+
+  
+.container .box .column .bar .logo img {
+  height: 50px;
+  object-fit: cover;
+  border-radius: 100%;
+}
+
+
+.container .box .column .bar span {
+  padding-left: 10px;
+}
+
+
+.container .box .column .bar .simboli i {
+  margin: 0 5px;
+  font-size: 20px;
+  color:grey;
+}
+
+
+.container .box .column.left  .notifiche {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+.container .box .column.left  .notifiche .bell {
+  font-size: 60px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+
+
+.container .box .column.left  .notifiche .text-notifiche {
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+}
+
+
+
+
+.container .box .column.left  .search  {
+  text-align: center;
+  position: relative;
+}
+
+.container .box .column.left  .search input {
+  width: 80%;
+  height: 80%;
+  padding-left: 30px;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+
+
+
+
+.container .box .column.left  .search i {
+  position: absolute;
+  top:50%;
+  left:15%;
+  transform: translate(-50%,-50%);
+  z-index: 3;
+}
+
+
+
+
+
+
+.container .box .column.left  .list-avatar img {
+  height: 50px;
+  object-fit: cover;
+  border-radius: 100%;
+}
+
+
+
+.container .box .column.right .bar.right .text-logo-right  {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+.container .box .column.right .bar.right .text-logo-right :nth-child(1)  {
+  padding-right: 70px;
+}
+
+
+
+.container .box .column.right .bar.right .text-logo-right :nth-child(2)  {
+  color:gray;
+}
+
+
+.box .column.right .cont-chat .message   {
+  border-radius: 20px;
+  display: grid;
+}
+
+
+.box .column.right .cont-chat .message span   {
+  padding-left: 20px;
+}
+
+.box .column.right .cont-chat .message .date  {
+  color:red;
+  padding-right: 20px;
+  margin-top: 20px;
+  justify-self: end;
+}
+
+
 
 /* NOTE debug */
+/* 
 .debug .box {
   background-color: blue;
 }
@@ -142,4 +314,4 @@ height: 100%;
 
 .debug .box .column.right .cont-chat .message.received {
   background-color: purple;
-}
+} */
